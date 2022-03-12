@@ -11,7 +11,7 @@ function App() {
     if (totalNumOfClicks > 0) {
       addPokemon(pokemon);
     }
-  }, []);
+  }, [totalNumOfClicks, pokemon, addPokemon]);
 
   const incrementNumberOfClicks = () => {
     setTotalNumOfClicks(totalNumOfClicks + 1);
