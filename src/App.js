@@ -7,11 +7,16 @@ function App() {
   const [totalNumOfClicks, setTotalNumOfClicks] = useState(0);
   const { pokemon, addPokemon } = usePokemon();
 
-  useEffect(() => {
-    if (totalNumOfClicks > 0) {
-      addPokemon(pokemon);
-    }
-  }, [totalNumOfClicks]);
+  useEffect(
+    () => {
+      if (totalNumOfClicks > 0) {
+        addPokemon(pokemon);
+      }
+    },
+    [totalNumOfClicks],
+    [addPokemon],
+    [pokemon]
+  );
 
   const incrementNumberOfClicks = () => {
     setTotalNumOfClicks(totalNumOfClicks + 1);
