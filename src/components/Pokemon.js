@@ -18,6 +18,7 @@ const Poke = ({ poke }) => {
         transform: `translate3d(${poke.startingX}px, ${posY}px, 0)`,
       }}
       src={poke.url}
+      alt="pokemons"
     />
   );
 };
