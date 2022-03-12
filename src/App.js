@@ -7,16 +7,12 @@ function App() {
   const [totalNumOfClicks, setTotalNumOfClicks] = useState(0);
   const { pokemon, addPokemon } = usePokemon();
 
-  useEffect(
-    () => {
-      if (totalNumOfClicks > 0) {
-        addPokemon(pokemon);
-      }
-    },
-    [totalNumOfClicks],
-    [addPokemon],
-    [pokemon]
-  );
+   useEffect(() => {
+    if (totalNumOfClicks > 0) {
+      addPokemon(pokemon);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [totalNumOfClicks]);
 
   const incrementNumberOfClicks = () => {
     setTotalNumOfClicks(totalNumOfClicks + 1);
