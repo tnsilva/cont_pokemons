@@ -9,7 +9,7 @@ const Poke = ({ poke }) => {
       setPosY(window.innerHeight);
       console.log("moving");
     }, 100);
-  }, []);
+  }, [Poke]);
 
   return (
     <img
